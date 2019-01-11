@@ -13,29 +13,47 @@
             color: rebeccapurple;
         }
     </style>
+
+    <script>
+        var videos = ["https://www.youtube.com/embed/9bZkp7q19f0", "https://www.youtube.com/embed/dQw4w9WgXcQ"];
+        window.onload = function () {
+            var playerDiv = document.getElementById("random_player");
+            var player = document.createElement("IFRAME");
+            var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
+            player.setAttribute('width', '640');
+            player.setAttribute('height', '390');
+            player.setAttribute('src', randomVideoUrl);
+            playerDiv.appendChild(player);
+        };
+    </script>
 </head>
 <body>
-    <h1>Header to your homepage</h1>
-    <a href="www.google.com">Google</a>
+    <center>
+        <h1>Header to your homepage</h1>
+        <a href="www.google.com">Google</a>
 
-    <form id="names" method="POST" action="">
-        <fieldset>
-            <label>Name: </label><br>
-            <input type="text" size="10" maxlength="30" name="name" id="name"
-                   value="Name"><br>
-            <label>Last Name: </label>
-            <input type="text" size="10" maxlength="30" name="last" id="last"
-                   value="Last Name"><br>
-            <br><input type="submit" value="Order" id="submit" name="btnOrder">
-        </fieldset>
-    </form>
+        <form id="names" method="POST" action="">
+            <fieldset>
+                <label>Name: </label><br>
+                <input type="text" size="10" maxlength="30" name="name" id="name"
+                       value="Name"><br>
+                <label>Last Name: </label>
+                <input type="text" size="10" maxlength="30" name="last" id="last"
+                       value="Last Name"><br>
+                <br><input type="submit" value="Order" id="submit" name="btnOrder">
+            </fieldset>
+        </form>
 
-    <h3>Brooks</h3>
-    <h3>AND</h3>
-    <h3>Davids</h3>
-    <h3>Amazing</h3>
-    <h3>Website</h3>
+        <h3>Brooks</h3>
+        <h3>AND</h3>
+        <h3>Davids</h3>
+        <h3>Amazing</h3>
+        <h3>Website</h3>
 
-    <img src="../img/download.jpg">
+        <img src="../img/download.jpg">
+
+        <div id="random_player" />
+    </center>
+
 </body>
 </html>
